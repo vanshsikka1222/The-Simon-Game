@@ -20,6 +20,16 @@ $(document).keypress(function() {
         started = true;
     }
 });
+//For Mobile (Click anywhere on Screen to Start the Game)
+$(document).click(function() {
+    if (!started) {
+        //The h1 title, change this to say "Level 1".
+        $("#level-title").text("Level " + level);
+        nextSequence();
+        //Now game is started so "started = true"
+        started = true;
+    }
+});
 
 //--------------USER COLORS----------------------------------------
 //If any of the Button is clicked by User add in User Array
