@@ -10,16 +10,6 @@ var started = false;
 //Create a new variable called level and start at level 0.
 var level = 0;
 
-//For Mobile (Click anywhere on Screen to Start the Game)
-$(document).click(function() {
-    if (!started) {
-        //The h1 title, change this to say "Level 1".
-        $("#level-title").text("Level " + level);
-        nextSequence();
-        //Now game is started so "started = true"
-        started = true;
-    }
-});
 //When a keyboard key has been pressed, when that happens for the first time, call nextSequence().
 $(document).keypress(function() {
     if (!started) {
